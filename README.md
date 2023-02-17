@@ -8,7 +8,7 @@ Clone the repository to your local machine and install the necessary dependencie
     cd projectPortfolio
     pip install -r requirements.txt
     ```
-##Run the application.
+#Run the application.
 
     ```bash
     python app.py
