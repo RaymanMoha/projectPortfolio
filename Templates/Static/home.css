@@ -1,0 +1,41 @@
+.background-image {
+            background-color: #19fbff;
+            background-image: linear-gradient(45deg, #19fbff 0%, #d733da 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            height: 300px;
+            width:fit-content;
+            background-color: rgb(255, 255, 255);
+            border: 4px solid rgb(7, 47, 92);
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 25px;
+        }
+        .item {
+            align-items: center;
+            justify-items: center;
+        }
+        h1 {
+            font-weight:700;
+            text-align: center;
+        }
+        .full-width {
+            flex-basis: 100%;
+        }
+        .btn {
+            color: white;
+        }
+        .btn-purple{
+            background: #d733da;
+        }
+        .btn-purple:hover {
+            background-color: #d733da;
+            color: white;
+        }
