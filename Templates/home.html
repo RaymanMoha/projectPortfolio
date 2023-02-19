@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome user!!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <a href="{{ url_for('loginVolunteer') }}" class="btn">Volunteer</a>
-    <a href="{{ url_for('loginNgo') }}" class="btn">Ngo</a>
+    <div class="background-image">
+        </br></br></br></br></br>
+        <div class="container">
+          <div class="item full-width">
+            <h1>Volunteer portal</h1></div>
+          <div class="item">
+            <a href="{{ url_for('loginVolunteer') }}" class="btn">
+              <button class="btn btn-primary text-nowrap btn-lg" type="button">Volunteer</button></a></div>
+          <div class="item">
+            <a href="{{ url_for('loginNgo') }}" class="btn">
+              <button class="btn btn-purple text-nowrap btn-lg" type="button">Ngo</button></a></div>
+          </div>
+    </div>
 </body>
 </html>
