@@ -1,19 +1,13 @@
 #!/usr/bin/python3
-"""Defines a class User"""
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
+from sqlalchemy import Column, String
 
 
-class User(BaseModel):
-    """Represents a class that inherits from BaseModel
+class User(BaseModel, Base):
+    """Representation of a user instance"""
 
-        Public class attributes:
-           email: string - empty string
-           password: string - empty string
-           first_name: string - empty string
-           last_name: string - empty string
-    """
-
-    email = ""
-    password = ""
-    first_name = ""
-    last_name = ""
+    __tablename__: str = "users"
+    email = Column(String(128), nullable=False)
+    password = Column(String(128), nullable=False)
+    first_name = Column(String(128))
+    last_name = Column(String(128))
