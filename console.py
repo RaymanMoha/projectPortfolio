@@ -4,7 +4,6 @@ Entry point of the command interpreter
 """
 
 import cmd
-from models.engine import volunteer
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
@@ -196,7 +195,7 @@ class GHCommand(cmd.Cmd):
             argument = argument + arg + " "
         try:
             eval('self.do_' + cmd + '(argument)')
-        except:
+        except ValueError:
             print("** invalid command **")
 
 

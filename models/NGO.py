@@ -16,4 +16,4 @@ class Ngo(BaseModel):
     ngo_name = Column(String(128), nullable=False)
     ngo_path = Column(String(128), nullable=False)
     volunteer = relationship("Volunteer", backref="ngo", cascade="delete")
-    event = relationship("Event", backref= "volunteer, ngo", cascade="delete")
+    event = relationship("Event", backref="volunteer, ngo", cascade="delete")

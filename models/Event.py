@@ -3,7 +3,7 @@
     Define the class Image.
 """
 from models.base_model import BaseModel
-from sqlalchemy.orm import relationship
+# from sqlalchemy.orm import relationship
 from sqlalchemy import Column, ForeignKey, String
 
 
