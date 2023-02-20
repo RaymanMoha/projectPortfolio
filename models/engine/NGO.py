@@ -7,7 +7,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import Column, ForeignKey, String
 
 
-class ngo(BaseModel):
+class Ngo(BaseModel):
     """
         Define the class Image that inherits from BaseModel.
     """

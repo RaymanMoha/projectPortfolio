@@ -7,7 +7,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import Column, ForeignKey, String
 
 
-class Image(BaseModel):
+class Event(BaseModel):
     """
         Define the class Event that inherits from BaseModel.
     """
