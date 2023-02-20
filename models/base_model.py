@@ -60,16 +60,17 @@ class BaseModel:
             updated_at with the current datetime
         """
         self.updated_at = datetime.now()
+        models.storage.new(self)
         models.storage.save()
 
     def to_dict(self):
-        """returns a dictionary containing
-            all keys/values of __dict__ of the instance
-        """
+        """Returns a dictionary containing all keys/values of __dict__ of the instance."""
         new_dict = self.__dict__.copy()
-        new_dict["__class__"] = type(self).__name__
-        new_dict["created_at"] = self.created_at.isoformat()
-        new_dict["updated_at"] = self.updated_at.isoformat()
+        if '_sa_instance_state' in new_dict:
+            del new_dict['_sa_instance_state']
+        new_dict['created_at'] = new_dict['created_at'].isoformat()
+        new_dict['updated_at'] = new_dict['updated_at'].isoformat()
+        new_dict['__class__'] = self.__class__.__name__
         return new_dict
 
     def delete(self):
