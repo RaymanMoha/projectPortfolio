@@ -7,10 +7,11 @@ import cmd
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
+from models.Event import Event
 
 
 c_list = {"BaseModel": BaseModel,
-          "User": User}
+          "User": User, "Event": Event}
 
 
 new_c_list = []

@@ -6,12 +6,10 @@ Contains the class DBStorage
 from models.base_model import Base
 from models.user import User
 from models.Event import Event
-from models.volunteer import Volunteer
-from models.NGO import Ngo
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 
-classes = {"User": User, "NGO": Ngo, "Event": Event, "Volunteer": Volunteer}
+classes = {"User": User, "Event": Event, }
 
 
 class DBStorage:
