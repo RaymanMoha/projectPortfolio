@@ -9,7 +9,7 @@ from models.Event import Event
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 
-classes = {"User": User, "Event": Event, }
+classes = {"User": User, "Event": Event}
 
 
 class DBStorage:

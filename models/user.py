@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, sessionmaker
 
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, create_engine, engine
 
 
 class User(BaseModel, Base):
@@ -16,3 +16,10 @@ class User(BaseModel, Base):
 
 
 Event = relationship("Event", backref="User", cascade="delete")
+
+
+# engine = create_engine(f'mysql://{guidehub_dev}:{guidehub_dev_pwd}@{localhost}/{guidehub_dev_db}')
+Base.metadata.create_all(bind=engine)
+
+Session = sessionmaker(bind=engine)
+session = Session
