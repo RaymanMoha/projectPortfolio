@@ -15,10 +15,6 @@ class User(BaseModel, Base):
     last_name = Column(String(128))
 
 
-Event = relationship("Event", backref="User", cascade="delete")
-
-
-# engine = create_engine(f'mysql://{guidehub_dev}:{guidehub_dev_pwd}@{localhost}/{guidehub_dev_db}')
 Base.metadata.create_all(bind=engine)
 
 Session = sessionmaker(bind=engine)
