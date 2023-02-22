@@ -14,3 +14,5 @@ class User(BaseModel, Base):
     first_name = Column(String(128))
     last_name = Column(String(128))
 
+    user_event = relationship("UserEvent", backref="user",
+                               cascade="delete")
