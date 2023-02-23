@@ -16,10 +16,10 @@ def homepage():
     return render_template('home.html')
 
 @app.route('/indexNgo')
-def indexprof():
+def indexNgo():
     return render_template('indexNgo.html')
     
 @app.route('/indexVol')
-def indexstud():
+def indexVol():
     return render_template('indexVol.html')
 
