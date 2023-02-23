@@ -11,3 +11,15 @@ app.debug = True
 def home():
     return render_template('home.html')
 
+@app.route('/home')
+def homepage():
+    return render_template('home.html')
+
+@app.route('/indexNgo')
+def indexprof():
+    return render_template('indexNgo.html')
+    
+@app.route('/indexVol')
+def indexstud():
+    return render_template('indexVol.html')
+
