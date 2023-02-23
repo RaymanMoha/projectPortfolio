@@ -19,7 +19,7 @@ class GHCommand(cmd.Cmd):
         Contains the entry point of the command interpreter.
     """
 
-    prompt = ("(i-share) ")
+    prompt = ("GuideHub")
 
     def do_quit(self, args):
         """
