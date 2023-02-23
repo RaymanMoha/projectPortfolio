@@ -10,5 +10,5 @@ from models.engine.db_storage import DBStorage
 
 classes = {"User": User, "BaseModel": BaseModel, "Event": Event}
 
-storage = FileStorage()
+storage = DBStorage()
 storage.reload()
